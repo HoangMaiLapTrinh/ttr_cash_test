@@ -1,0 +1,38 @@
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class SystemSettingModel extends Model
+{
+    protected $table            = 'system_settings';
+    protected $primaryKey       = 'id';
+    protected $useAutoIncrement = true;
+
+    protected $allowedFields = [
+        'code',
+        'recipient',
+        'cc',
+        'bcc',
+        'subject',
+        'body',
+        'error_message',
+        'status',
+        'sent_at',
+        'resent_times',
+        'created_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
+    protected $useTimestamps = true;
+
+    protected $createdField  = 'created_at';
+    protected $updatedField  = 'updated_at';
+    protected $deletedField  = 'deleted_at';
+    protected $useSoftDeletes = true;
+
+    protected $returnType = 'array';
+}
+
