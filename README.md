@@ -33,3 +33,12 @@ Dựa vào nội dung bên trong code và các file liên quan để thiết k�
 ### b) Cập nhật cột resent_times lại thành int: 2 ký tự.
 
 # Câu 3 chuẩn bị câu lệnh cần thiết để chạy dự án cũng như gửi collection postman liên quan.
+
+# tạo migration
+# php .\spark make:migration CreateSystemSettingsTable
+# php spark make:migration CreateEmailHistoriesTable  
+
+# chạy
+# php spark migrate
+# php spark serve  
+

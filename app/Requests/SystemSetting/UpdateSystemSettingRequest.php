@@ -2,7 +2,7 @@
 
 namespace App\Requests\SystemSetting;
 
-class CreateSystemSettingRequest
+class UpdateSystemSettingRequest
 {
     public static function rules(): array
     {

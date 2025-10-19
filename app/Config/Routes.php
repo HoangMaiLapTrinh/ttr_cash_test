@@ -7,3 +7,4 @@ $routes->group('admin', ['namespace' => 'App\Controllers\Admin'], function ($rou
     $routes->resource('system-settings', ['controller' => 'SystemSettingController']);
     $routes->resource('email-histories', ['controller' => 'EmailHistoryController']);
 });
+$routes->post('admin/login', 'AuthController::login');
