@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "43a58f08-5caf-4a78-b33b-d5c25aaeb43c",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40870369",
+		"_collection_link": "https://www.postman.com/ttrcash/workspace/ttr-cash-test/collection/40870369-43a58f08-5caf-4a78-b33b-d5c25aaeb43c?action=share&source=collection_link&creator=40870369"
+	},
+	"item": [
+		{
+			"name": "Email Histories",
+			"item": [
+				{
+					"name": "GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "jwt",
+							"jwt": [
+								{
+									"key": "secret",
+									"value": "secret-key-1234567890",
+									"type": "string"
+								},
+								{
+									"key": "algorithm",
+									"value": "HS256",
+									"type": "string"
+								},
+								{
+									"key": "isSecretBase64Encoded",
+									"value": false,
+									"type": "boolean"
+								},
+								{
+									"key": "payload",
+									"value": "{}",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "headerPrefix",
+									"value": "Bearer",
+									"type": "string"
+								},
+								{
+									"key": "queryParamKey",
+									"value": "token",
+									"type": "string"
+								},
+								{
+									"key": "header",
+									"value": "{}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "jwt.secret_key",
+								"value": "secret-key-1234567890",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}email-histories",
+							"host": [
+								"{{base_url}}email-histories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}email-histories/4",
+							"host": [
+								"{{base_url}}email-histories"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"EMAIL_001\",\r\n  \"recipient\": \"customer@example.com\",\r\n  \"cc\": \"support@example.com\",\r\n  \"bcc\": \"manager@example.com\",\r\n  \"subject\": \"Welcome to ABC!\",\r\n  \"body\": \"<p>Xin chào <strong>HOANG MAI</strong>,</p><p>Cảm ơn bạn đã đăng ký ABC. Hãy xác nhận tài khoản của bạn bằng cách nhấn vào liên kết dưới đây:</p><p><a href='https://ABC.com/verify'>Xác nhận tài khoản</a></p>\",\r\n  \"options\": \"\",\r\n  \"status\": 1,\r\n  \"error_message\": null,\r\n  \"sent_at\": null,\r\n  \"resent_times\": 0\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{base_url}}email-histories",
+							"host": [
+								"{{base_url}}email-histories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CHANGE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"EMAIL_001\",\r\n  \"recipient\": \"customer@example.com\",\r\n  \"cc\": \"support@example.com\",\r\n  \"bcc\": \"manager@example.com\",\r\n  \"subject\": \"Welcome to ABC!\",\r\n  \"body\": \"<p>Xin chào <strong>HOANG MAI</strong>,</p><p>Cảm ơn bạn đã đăng ký ABC. Hãy xác nhận tài khoản của bạn bằng cách nhấn vào liên kết dưới đây:</p><p><a href='https://ABC.com/verify'>Xác nhận tài khoản</a></p>\",\r\n  \"options\": \"\",\r\n  \"status\": 0,\r\n  \"error_message\": null,\r\n  \"sent_at\": null,\r\n  \"resent_times\": 0\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/admin/email-histories/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin",
+								"email-histories",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}email-histories/4",
+							"host": [
+								"{{base_url}}email-histories"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "System Setting",
+			"item": [
+				{
+					"name": "GET ALL",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}system-settings",
+							"host": [
+								"{{base_url}}system-settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BY ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"meta_key\": \"site_name\",\r\n    \"meta_value\": \"abc\",\r\n    \"label\": \"abc\",\r\n    \"name\": \"abc\",\r\n    \"role_type\": \"user\",\r\n    \"description\": \"abc\",\r\n    \"status\": \"1\",\r\n    \"option\": \"\",\r\n    \"text\": \"abc\",\r\n    \"nullable\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}system-settings",
+							"host": [
+								"{{base_url}}system-settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CHANGE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"meta_key\": \"site_name\",\r\n    \"meta_value\": \"abcd\",\r\n    \"label\": \"abcd\",\r\n    \"name\": \"abcdef\",\r\n    \"role_type\": \"Admin\",\r\n    \"description\": \"abcd\",\r\n    \"status\": \"1\",\r\n    \"option\": \"\",\r\n    \"text\": \"abc\",\r\n    \"nullable\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}system-settings/3",
+							"host": [
+								"{{base_url}}system-settings"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}system-settings/2",
+							"host": [
+								"{{base_url}}system-settings"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "jwt.secret_key",
+								"value": "secret-key-1234567890",
+								"type": "text"
+							},
+							{
+								"key": "email",
+								"value": "hoangmai020603@gmail.com",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "password",
+								"value": "123123123",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
