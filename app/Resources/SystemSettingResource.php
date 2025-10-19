@@ -25,7 +25,11 @@ class SystemSettingResource implements JsonSerializable
             'meta_key'          => $this->resource['meta_key'],
             'meta_value'        => $this->resource['meta_value'],
             'label'             => $this->resource['label'],
-            'field_type'        => $this->resource['field_type'],
+            'name'              => $this->resource['name'],
+            'role_type'         => $this->resource['role_type'],
+            'description'       => $this->resource['description'],
+            'created_at'        => $this->resource['created_at'],
+            'updated_at'        => $this->resource['updated_at'],
         ];
     }
 

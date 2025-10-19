@@ -16,10 +16,31 @@ class CreateSystemSettingsTable extends Migration
                 'auto_increment' => true,
             ],
             
+            'meta_key' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 255,
+            ],
+
+            'meta_value' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
+
+            'label' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 255,
+            ],
+
             'name' => [
                 'type'       => 'VARCHAR',
                 'constraint' => 100,
                 'null'       => false,
+            ],
+            
+            'role_type' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 50,
+                'null'       => true,
             ],
             
             'description' => [

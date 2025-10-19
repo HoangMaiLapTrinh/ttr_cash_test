@@ -12,7 +12,11 @@ class SystemSettingModel extends Model
 
     protected $allowedFields = [
         'id',
+        'meta_key',
+        'meta_value',
+        'label',
         'name',
+        'role_type',
         'description',
         'status',
         'created_at',
