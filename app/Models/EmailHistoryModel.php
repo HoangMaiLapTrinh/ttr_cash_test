@@ -9,6 +9,7 @@ class EmailHistoryModel extends Model
     protected $table = 'email_histories';
     protected $primaryKey = 'id';
     protected $allowedFields = [
+        'id',
         'code',
         'recipient',
         'cc',
