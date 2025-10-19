@@ -7,7 +7,11 @@ use App\Requests\SystemSetting\CreateSystemSettingRequest;
 use App\Resources\SystemSettingResource;
 use App\Services\JwtAuthService;
 use CodeIgniter\RESTful\ResourceController;
+use CodeIgniter\HTTP\IncomingRequest;
 
+/**
+ * @property IncomingRequest $request
+ */
 class SystemSettingController extends ResourceController
 {
   protected $model;

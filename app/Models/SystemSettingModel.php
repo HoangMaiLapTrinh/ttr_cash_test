@@ -11,19 +11,16 @@ class SystemSettingModel extends Model
     protected $useAutoIncrement = true;
 
     protected $allowedFields = [
-        'code',
-        'recipient',
-        'cc',
-        'bcc',
-        'subject',
-        'body',
-        'error_message',
+        'id',
+        'name',
+        'description',
         'status',
-        'sent_at',
-        'resent_times',
         'created_at',
         'updated_at',
-        'deleted_at'
+        'deleted_at',
+        'option',
+        'text',
+        'nullable'
     ];
 
     protected $useTimestamps = true;
